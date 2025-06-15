@@ -1,0 +1,74 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --editor-bg: #f4f4f4;
+  --border-color: #cccccc;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --editor-bg: #2e2e2e;
+  --border-color: #444;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: var(--editor-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+header button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.editor-container {
+  display: flex;
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+textarea {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: var(--editor-bg);
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
+}
+
+textarea:last-child {
+  border-right: none;
+}
+
+iframe {
+  height: 40vh;
+  width: 100%;
+  border: none;
+}
